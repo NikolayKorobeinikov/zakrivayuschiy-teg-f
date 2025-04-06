@@ -1,16 +1,284 @@
 /* Здесь вы напишете основную часть стилей страницы.
 
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
+✦ like-icon — для svg-иконки анимированного сердца  
 ✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
+✦ card__icon-button — для кнопки, оборачивающей иконку    
+✦ card__icon-button — для кнопки, оборачивающей иконку (надо ли этот class добавлять в footer)
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
+✦ button__text — для обозначения текстового элемента внутри кнопки 
 
 */
 
+/* Общие стили для страницы */
+
 .page {
+  font-family: var(--main-text-font);
+  font-size: var(--main-font-size);
+  color: var(--main-text-color);
+  font-variation-settings: "wght" var(--font-weight-inter);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  margin: 0 auto;
+  width: 100%;
+  height: 960px;
+  background-image: repeating-linear-gradient(
+      to right,
+      #d3d3d3 0 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+    linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Стили для заголовка */
+.header {
+  width: 100%;
+  padding-top: 100px;
+}
+
+.logo {
+  margin: 0 auto;
+  width: clamp(700px, 100% - 744px, 1440px);
+  min-height: 364px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid rgba(0, 0, 0, 1);
+  background-color: white;
+}
+
+.logo__title {
+  font-family: var(--accent-text-font), monospace;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  color: var(--main-text-color);
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-block-end: 20px;
+}
+
+.text__content {
+  font-family: var(--accent-text-font), monospace;
+  font-size: clamp(1.4375rem, 1.6356rem + -0.8451vw, 0.875rem);
+  color: var(--main-text-color);
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+/* Стили для секций */
+.section {
+  margin: 0 auto;
+  width: calc(100% - 744px);
+}
+
+.section:first-of-type {
+  margin-block-start: 100px;
+}
+
+.section:not(:first-of-type) {
+  margin-block-start: 50px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.section__title:nth-of-type(1) {
+  background-color: #fff;
+}
+
+.section__title {
+  font-family: var(--main-text-font), sans-serif;
+  font-size: var(--main-text-size);
+  font-variation-settings: "wght" var(--font-weight-title);
+  color: var(--main-text-color);
+  line-height: 100%;
+  border: 2px solid rgba(0, 0, 0, 1);
+  padding: 3px 24px 3px 10px;
+}
+
+/* .section__image {
+  outline: 2px solid rgba(0, 0, 0, 1);
+} */
+
+.subtitle {
+  position: absolute;
+  top: 56px;
+  right: 25px;
+  font-family: var(--accent-text-font), monospace;
+  font-size: var(--additional-font-size);
+  font-weight: var(--font-weight-normal);
+  color: var(--main-text-color);
+  line-height: 100%;
+  text-transform: uppercase;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+}
+
+.section:nth-of-type(4) .subtitle,
+.section:nth-of-type(5) .subtitle,
+.section:nth-of-type(6) .subtitle,
+.section:nth-of-type(7) .subtitle,
+.section:nth-of-type(8) .subtitle {
+  text-transform: lowercase;
+}
+
+.section__wrap {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+
+.section__description {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+}
+
+.description {
+  font-family: var(--main-text-font), sans-serif;
+  font-variation-settings: "wght" var(--font-weight-inter);
+  color: var(--main-text-color);
+  line-height: 21px;
+}
+
+/* Стили для кнопок */
+
+.card__icon-button {
+  margin-block-start: 25px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  /* border: 2px solid rgba(0, 0, 0, 1); */
+  /* transition: box-shadow 0.3s ease; */
+  position: relative;
+  overflow: hidden;
+}
+
+.button:focus,
+.button-save:focus {
+  outline: none;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+}
+
+.button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: translateX(100%);
+}
+
+.button span {
+  position: relative;
+  z-index: 1;
+  mix-blend-mode: difference;
+}
+
+/* .like-icon {
+  max-width: 27px;
+  max-height: 24px;
+} */
+
+.button__text {
+  font-family: var(--accent-text-font), monospace;
+  font-weight: var(--font-weight-normal);
+  color: var(--main-text-color);
+  line-height: 90%;
+}
+
+.card__like-button {
+  font-size: var(--additional-font-size);
+  padding: 12.5px 37px;
+  border: 2px solid rgba(0, 0, 0, 1);
+}
+
+/* Стили для футера */
+.footer {
+  margin: 0 auto;
+  padding-block-start: 50px;
+  padding-block-end: 103px;
+  width: clamp(335px, 100% - 1105px, 1440px);
+}
+
+.save-button {
+  border: 2px solid rgba(0, 0, 0, 1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  padding: 15px 21px 15px 19px;
+}
+
+.footer__icon {
+  max-width: 21px;
+  height: auto;
+}
+
+.button__text-save {
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+}
+
+/* Стили для эффектов */
+
+.black-and-white {
+  filter: grayscale(80%);
+}
+
+.neon-effect {
+  filter: brightness(1) contrast(1) saturate(4);
+}
+
+.bright-purple {
+  filter: brightness(80%) contrast(100%) saturate(120%) hue-rotate(30deg);
+}
+
+.green-blue-effect {
+  filter: hue-rotate(30deg) saturate(2) brightness(70%) sepia(20%) contrast(1)
+    invert(85%);
+}
+
+.beige-gray-tones {
+  filter: brightness(115%) contrast(90%) saturate(50%) hue-rotate(10deg)
+    grayscale(85%) sepia(80%);
+}
+
+.blur-effect {
+  -webkit-filter: blur(1rem);
+  filter: blur(1rem);
+}
+
+.brown-green-tones {
+  filter: hue-rotate(135deg) saturate(2) contrast(60%) brightness(100%)
+    blur(2px);
+}
+
+/* Стили для поддержки webkit */
+@supports (-webkit-text-stroke: 1px var(--stroke-color)) {
+  .subtitle {
+    -webkit-text-stroke: 1px var(--stroke-color);
+    -webkit-text-fill-color: rgb(0, 0, 0);
+  }
+}
+
+.no-webkit-text-stroke .subtitle {
+  text-shadow: -1px -1px 0 var(--stroke-color), 1px -1px 0 var(--stroke-color),
+    -1px 1px 0 var(--stroke-color), 1px 1px 0 var(--stroke-color);
 }
