@@ -1,1 +1,21 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+    --main-text-font: "Inter";
+    --accent-text-font: "PressStart 2P";
+    --main-font-size: 18px;
+    --additional-font-size: 14px;
+    --main-text-color: rgba(0, 0, 0, 1);
+    --font-weight-normal: 400;
+    --font-weight-bold: 700;
+    --stroke-color: rgb(255, 255, 255, 1);
+    --background-color: black;
+    --text-color: white;
+    --background-image-pattern: repeating-linear-gradient(to right,#d3d3d3 0 2px,transparent 2px 4px),
+                                repeating-linear-gradient(to bottom, #d3d3d3 0 2px, transparent 2px 4px),
+                                linear-gradient(to bottom, #e7e7e7 0.01%, #1a1a1a);
+    --like-main-body-color: none;
+    --like-contour-color: black;
+    --like-sparks-color: #ff0000;
+  }
+  
