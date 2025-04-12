@@ -39,14 +39,14 @@
 
 .logo {
   margin: 0 auto;
-  width: clamp(375px, 100% - 700px, 1440px);
+  width: clamp(375px, 100% - 740px, 1440px);
   min-height: 368px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
-  border: 2px solid rgba(0, 0, 0, 1);
+  outline: 2px solid rgba(0, 0, 0, 1);
   background-color: white;
 }
 
