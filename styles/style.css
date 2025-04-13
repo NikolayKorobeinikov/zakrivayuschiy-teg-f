@@ -156,7 +156,7 @@
 }
 
 .card__icon-button {
-  max-height: 36px;
+  max-height: 38px;
   padding: 0;
   outline: 2px solid transparent;
   background-color: transparent;
@@ -251,7 +251,6 @@
 }
 
 .dialog[open] {
-  /* width: clamp(375px, 353px, 100%); */
   /* почему это свойство лишее?? */
   margin: 384.5px auto;
   padding: 30px;
@@ -341,6 +340,10 @@
 }
 
 @media (width <= 375px) {
+  .page {
+    width: 100%;
+    min-width: 375px;
+  }
   .logo {
     min-height: 327px;
   }
