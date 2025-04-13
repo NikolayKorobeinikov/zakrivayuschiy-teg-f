@@ -13,21 +13,19 @@
 /* Общие стили для страницы */
 
 .page {
-  font-family: var(--main-text-font);
-  font-size: var(--main-font-size);
-  color: var(--main-text-color);
-  font-variation-settings: "wght" var(--font-weight-inter);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   margin: 0 auto;
-  /* width: 100%;
-  height: 960px; */
+  color: var(--main-text-color);
+  font-family: var(--main-text-font, "Inter", sans-serif);
+  font-size: var(--main-font-size);
   background-color: #ffffff;
   background-image: var(--background-image-pattern);
   background-repeat: no-repeat;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   background-attachment: fixed;
+  font-variation-settings: "wght" var(--font-weight-normal, 400);
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
 }
 
 /* Стили для заголовка */
@@ -38,41 +36,41 @@
 }
 
 .logo {
-  margin: 0 auto;
-  width: clamp(375px, 100% - 740px, 1440px);
-  min-height: 368px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  text-align: center;
+  align-items: center;
+  width: clamp(375px, 100% - 740px, 1440px);
+  min-height: 368px;
+  margin: 0 auto;
   outline: 2px solid rgba(0, 0, 0, 1);
+  text-align: center;
   background-color: white;
 }
 
 .logo__title {
-  font-family: var(--accent-text-font), monospace;
-  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
-  font-variation-settings: "wght" var(--font-weight-normal);
+  margin-block-end: 20px;
   color: var(--main-text-color);
+  font-family: var(--accent-text-font, "PressStart 2P", monospace);
+  font-weight: 400;
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   line-height: 100%;
   text-transform: uppercase;
-  margin-block-end: 20px;
 }
 
 .text__content {
-  font-family: var(--accent-text-font), monospace;
-  font-size: clamp(1.4375rem, 1.6356rem + -0.8451vw, 0.875rem);
-  font-variation-settings: "wght" var(--font-weight-normal);
   color: var(--main-text-color);
+  font-family: var(--accent-text-font, "PressStart 2P", monospace);
+  font-weight: 400;
+  font-size: clamp(1.4375rem, 1.6356rem + -0.8451vw, 0.875rem);
   line-height: 100%;
   text-transform: uppercase;
 }
 
 /* Стили для секций */
 .section {
-  margin: 0 auto;
   width: clamp(375px, calc(100% - 740px), 100%);
+  margin: 0 auto;
   border: 2px solid black;
   background-color: var(--stroke-color);
 }
@@ -95,30 +93,30 @@
 }
 
 .section__title {
-  font-family: var(--main-text-font), sans-serif;
-  font-size: var(--main-text-size);
-  font-variation-settings: "wght" var(--font-weight-bold);
-  color: var(--main-text-color);
-  line-height: normal;
   border-bottom: 2px solid rgba(0, 0, 0, 1);
   padding: 5px 24px 5px 10px;
+  color: var(--main-text-color);
+  font-family: var(--main-text-font, "Inter", sans-serif);
+  font-size: var(--main-text-size);
+  line-height: normal;
+  font-variation-settings: "wght" var(--font-weight-bold, 700);
 }
 
 .subtitle {
   position: absolute;
-  top: 56px;
+  top: 27px;
   right: 25px;
-  font-family: var(--accent-text-font), monospace;
-  font-size: var(--additional-font-size);
-  font-weight: var(--font-weight-normal);
-  color: var(--main-text-color);
+  z-index: 1;
   opacity: 0.5;
+  color: var(--main-text-color);
+  font-family: var(--accent-text-font, "PressStart 2P", monospace);
+  font-weight: var(--font-weight-normal);
+  font-size: var(--additional-font-size);
   line-height: 100%;
   text-transform: uppercase;
-  mix-blend-mode: hard-light;
   text-shadow: 1px 1px 0 var(--stroke-color), 1px -1px 0 var(--stroke-color),
     -1px 1px 0 var(--stroke-color), -1px -1px 0 var(--stroke-color);
-  z-index: 1;
+  mix-blend-mode: hard-light;
 }
 
 .section:nth-of-type(n + 4):nth-of-type(-n + 8) .subtitle {
@@ -126,9 +124,9 @@
 }
 
 .section__wrap {
-  padding: 25px;
   display: flex;
   flex-direction: column;
+  padding: 25px;
 }
 
 .image-wrap {
@@ -143,21 +141,20 @@
 }
 
 .description {
-  font-family: var(--main-text-font), sans-serif;
-  font-size: var(--main-font-size);
-  font-variation-settings: "wght" var(--font-weight-normal);
   color: var(--main-text-color);
+  font-family: var(--main-text-font, "Inter", sans-serif);
+  font-size: var(--main-font-size);
   line-height: 21px;
 }
 
 /* Стили для кнопок */
 
 .card__buttons {
-  margin-block-start: 25px;
   display: flex;
-  align-items: center;
   justify-content: flex-end;
+  align-items: center;
   gap: 12px;
+  margin-block-start: 25px;
 }
 
 /* .card__icon-button {
@@ -170,8 +167,8 @@
 }
 
 .button:focus {
-  outline: none;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 1);
+  outline: none;
   transition: box-shadow 0.3s ease;
 }
 
@@ -187,11 +184,10 @@
 .button {
   position: relative;
   z-index: 1;
-  overflow: hidden;
   border: 2px solid rgba(0, 0, 0, 1);
-  font-family: var(--accent-text-font), monospace;
+  overflow: hidden;
+  font-family: var(--accent-text-font, "PressStart 2P", monospace);
   font-size: var(--additional-font-size);
-  font-variation-settings: "wght" var(--font-weight-normal);
   line-height: 90%;
   background: var(--stroke-color);
   cursor: pointer;
@@ -201,19 +197,19 @@
 .button::before {
   content: "";
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
   background: var(--background-color);
-  transform: translateX(-100%) scaleX(1);
   transition: transform 0.5s ease-in-out;
+  transform: translateX(-100%) scaleX(1);
 }
 
 .button:hover::before {
-  transform: translateX(0) scaleX(1);
   transition: transform 0.5s ease-in-out;
+  transform: translateX(0) scaleX(1);
 }
 
 .card__like-button {
@@ -224,15 +220,15 @@
 
 .button__text,
 .footer__icon {
-  mix-blend-mode: difference;
   color: var(--stroke-color);
+  mix-blend-mode: difference;
 }
 
 .footer-button {
+  width: clamp(335px, 100% - 1110px, 1440px);
   margin: 0 auto;
   padding-block-start: 50px;
   padding-block-end: 103px;
-  width: clamp(335px, 100% - 1110px, 1440px);
 }
 
 .save-button {
@@ -240,8 +236,8 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-  white-space: nowrap;
   padding: 15px 21px 15px 19px;
+  white-space: nowrap;
 }
 
 .footer__icon {
@@ -249,9 +245,9 @@
   inline-size: 21px;
 }
 
-.dialog {
-  margin: 384.5px auto;
+.dialog[open] {
   width: clamp(375px, 353px, 100%);
+  margin: 384.5px auto;   /*почему это свойство лишее??*/
   padding: 30px;
 }
 
@@ -268,10 +264,9 @@
 }
 
 .dialog__text {
-  font-family: var(--accent-text-font), monospace;
-  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-  font-variation-settings: "wght" var(--font-weight-inter);
   color: var(--main-text-color);
+  font-family: var(--accent-text-font, "PressStart 2P", monospace);
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   line-height: 150%;
   text-transform: uppercase;
 }
@@ -322,6 +317,7 @@
 
 @supports (-webkit-text-stroke: 1px var(--stroke-color)) {
   .subtitle {
+    text-shadow: none;
     -webkit-text-stroke: 1px var(--stroke-color);
     -webkit-text-fill-color: rgb(0, 0, 0);
   }
@@ -336,8 +332,4 @@
   .save-button {
     flex-direction: column;
   }
-
-  /* .footer-button {
-    width: clamp(335px, 100% - 70px, 1440px);
-  } */
 }

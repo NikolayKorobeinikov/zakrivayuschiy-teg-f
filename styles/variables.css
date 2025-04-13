@@ -1,6 +1,6 @@
 :root {
-    --main-text-font: "Inter";
-    --accent-text-font: "PressStart 2P";
+    --main-text-font: "Inter", sans-serif;
+    --accent-text-font: "PressStart 2P", monospace;
     --main-font-size: 18px;
     --additional-font-size: 14px;
     --main-text-color: rgba(0, 0, 0, 1);

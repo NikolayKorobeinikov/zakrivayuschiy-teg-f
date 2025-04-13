@@ -1,11 +1,7 @@
-/* В этом файле уже написаны некоторые базовые стили, которые сбрасывают или преобразуют дефольное браузерное поведение.
-Здесь же лежит утилитарный класс visually-hidden на случай, если нужно скрыть какой-то элемент, но оставить доступным для скринридера.
-Вы можете изменять этот файл или дополнять. Но скорее всего, вам это не потребуется. */
-
 html {
   box-sizing: border-box;
-  scroll-behavior: smooth;
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -17,11 +13,11 @@ html {
 }
 
 body {
-  min-inline-size: 375px;
-  max-inline-size: 1440px;
   margin: 0;
   padding: 0;
   word-wrap: break-word;
+  min-inline-size: 375px;
+  max-inline-size: 1440px;
 }
 
 h1,
@@ -57,8 +53,8 @@ a {
 }
 
 button {
-  background: none;
   border: none;
+  background: none;
 }
 
 button:focus,
@@ -67,18 +63,18 @@ a:focus {
 }
 
 img {
+  display: block;
   max-width: 100%;
   height: auto;
-  display: block;
   object-fit: cover;
 }
 
 .visually-hidden {
   position: absolute;
-  inline-size: 1px;
-  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
   clip-path: inset(50%);
   white-space: nowrap;
 }
