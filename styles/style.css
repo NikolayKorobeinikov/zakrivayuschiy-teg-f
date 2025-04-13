@@ -61,7 +61,6 @@
 .text__content {
   color: var(--main-text-color);
   font-family: var(--accent-text-font, "PressStart 2P", monospace);
-  /* font-weight: 400; */
   font-size: clamp(1.4375rem, 1.6356rem + -0.8451vw, 0.875rem);
   line-height: 100%;
   text-transform: uppercase;
@@ -149,7 +148,6 @@
 /* Стили для кнопок */
 
 .card__buttons {
-  /* outline: 1px solid green; */
   display: flex;
   justify-content: flex-end;
   align-items: stretchx ;
