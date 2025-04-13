@@ -347,4 +347,8 @@
   .save-button {
     flex-direction: column;
   }
+
+  .dialog[open] {
+    padding: 30px 42px;
+  }
 }
