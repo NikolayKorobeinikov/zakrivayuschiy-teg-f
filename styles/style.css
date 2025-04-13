@@ -161,6 +161,7 @@
   align-items: center;
   max-width: 38px;
   max-height: 38px;
+  border: 2px solid transparent;
   padding: 0;
   outline: 2px solid transparent;
   background: transparent;
