@@ -43,7 +43,7 @@
   width: clamp(375px, 100% - 740px, 1440px);
   min-height: 368px;
   margin: 0 auto;
-  outline: 2px solid rgba(0, 0, 0, 1);
+  border: 2px solid rgba(0, 0, 0, 1);
   text-align: center;
   background-color: white;
 }
@@ -61,7 +61,7 @@
 .text__content {
   color: var(--main-text-color);
   font-family: var(--accent-text-font, "PressStart 2P", monospace);
-  font-weight: 400;
+  /* font-weight: 400; */
   font-size: clamp(1.4375rem, 1.6356rem + -0.8451vw, 0.875rem);
   line-height: 100%;
   text-transform: uppercase;
@@ -85,7 +85,6 @@
 
 .image-container {
   position: relative;
-  display: inline-block;
 }
 
 .section__title:nth-of-type(1) {
@@ -119,7 +118,7 @@
   mix-blend-mode: hard-light;
 }
 
-.section:nth-of-type(n + 4):nth-of-type(-n + 8) .subtitle {
+.subtitle-lowercase {
   text-transform: lowercase;
 }
 
@@ -150,16 +149,13 @@
 /* Стили для кнопок */
 
 .card__buttons {
+  /* outline: 1px solid green; */
   display: flex;
   justify-content: flex-end;
-  align-items: center;
-  gap: 12px;
+  align-items: stretchx ;
+  gap: 5px;
   margin-block-start: 25px;
 }
-
-/* .card__icon-button {
-  align-self: center;
-} */
 
 .like-icon {
   block-size: 36px;
@@ -247,7 +243,10 @@
 
 .dialog[open] {
   width: clamp(375px, 353px, 100%);
-  margin: 384.5px auto;   /*почему это свойство лишее??*/
+
+  /* почему это свойство лишее?? */
+  margin: 384.5px auto;
+
   padding: 30px;
 }
 
@@ -261,8 +260,14 @@
   justify-content: flex-start;
   align-items: center;
   gap: 20px;
+  max-width: 293px;
 }
 
+.dialog__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+  block-size: 39px;
+}
 .dialog__text {
   color: var(--main-text-color);
   font-family: var(--accent-text-font, "PressStart 2P", monospace);
