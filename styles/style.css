@@ -251,11 +251,9 @@
 }
 
 .dialog[open] {
-  width: clamp(375px, 353px, 100%);
-
+  /* width: clamp(375px, 353px, 100%); */
   /* почему это свойство лишее?? */
   margin: 384.5px auto;
-
   padding: 30px;
 }
 
