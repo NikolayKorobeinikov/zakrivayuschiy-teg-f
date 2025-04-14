@@ -256,14 +256,8 @@
 }
 
 .dialog {
-  outline: 2px solid rgba(0, 0, 0, 1);
   padding: 28px;
-  color: var(--main-text-color);
-  font-family: var(--accent-text-font, "PressStart 2P", monospace);
-  font-weight: var(--font-weight-normal);
-  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-  line-height: 150%;
-  text-transform: uppercase;
+  outline: 2px solid rgba(0, 0, 0, 1);
   max-inline-size: 357px;
 }
 
@@ -288,6 +282,15 @@
 .dialog__button {
   border: 2px solid rgba(0, 0, 0, 1);
   padding: 12.5px 132.5px;
+}
+
+.dialog__text {
+  color: var(--main-text-color);
+  font-family: var(--accent-text-font, "PressStart 2P", monospace);
+  font-weight: var(--font-weight-normal);
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 150%;
+  text-transform: uppercase;
 }
 
 .dialog__button .button__text {
@@ -366,10 +369,6 @@
   .dialog[open] {
     padding: 30px 38px;
     max-inline-size: 341px;
-  }
-
-  .dialog__content {
-    max-width: 257px;
   }
 
   .dialog__button {
