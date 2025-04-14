@@ -40,9 +40,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 368px;
   margin-inline: auto;
   border: 2px solid rgba(0, 0, 0, 1);
+  padding: 128px 120.5px;
   text-align: center;
   background-color: white;
   max-inline-size: 696px;
@@ -86,10 +86,6 @@
   position: relative;
 }
 
-.section__title:nth-of-type(1) {
-  background-color: #fff;
-}
-
 .section__title {
   border-bottom: 2px solid rgba(0, 0, 0, 1);
   padding: 5px 24px 5px 10px;
@@ -97,6 +93,7 @@
   font-family: var(--main-text-font, "Inter", sans-serif);
   font-size: var(--main-text-size);
   line-height: normal;
+  background-color: var(--stroke-color);
   font-variation-settings: "wght" var(--font-weight-bold, 700);
 }
 
@@ -168,12 +165,6 @@
   transition: border-color 0.3s ease;
   cursor: pointer;
   appearance: none;
-}
-
-.like-icon {
-  padding: 0;
-  block-size: 36px;
-  inline-size: 39px;
 }
 
 .button:focus {
@@ -258,9 +249,10 @@
 }
 
 .dialog[open] {
-  /* почему это свойство лишее?? */
-  margin: 384.5px auto;
+  margin: auto;
+  border: 2px solid rgba(0, 0, 0, 1);
   padding: 30px;
+  max-inline-size: 357px;
 }
 
 .dialog::backdrop {
@@ -291,6 +283,7 @@
 .dialog__text {
   color: var(--main-text-color);
   font-family: var(--accent-text-font, "PressStart 2P", monospace);
+  font-weight: var(--font-weight-normal);
   font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
   line-height: 150%;
   text-transform: uppercase;
@@ -358,13 +351,32 @@
     min-width: 375px;
   }
   .logo {
-    min-height: 327px;
+    padding: 120px 14px;
+  }
+
+  .subtitle {
+    top: 25px;
+    right: 13px;
   }
   .save-button {
     flex-direction: column;
   }
 
+  .footer__icon {
+    block-size: 28px;
+    inline-size: 28px;
+  }
+
   .dialog[open] {
     padding: 30px 42px;
+    max-inline-size: 341px;
+  }
+
+  .dialog__content {
+    max-width: 257px;
+  }
+
+  .dialog__button {
+    padding: 12.5px 114.5px;
   }
 }
