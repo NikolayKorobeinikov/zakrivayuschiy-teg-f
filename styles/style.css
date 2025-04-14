@@ -249,9 +249,21 @@
 }
 
 .dialog[open] {
+  display: grid;
+  grid-template-rows: repeat(2, min-content);
+  gap: 30px;
   margin: auto;
-  border: 2px solid rgba(0, 0, 0, 1);
-  padding: 30px;
+}
+
+.dialog {
+  outline: 2px solid rgba(0, 0, 0, 1);
+  padding: 28px;
+  color: var(--main-text-color);
+  font-family: var(--accent-text-font, "PressStart 2P", monospace);
+  font-weight: var(--font-weight-normal);
+  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
+  line-height: 150%;
+  text-transform: uppercase;
   max-inline-size: 357px;
 }
 
@@ -262,14 +274,6 @@
 
 .dialog__wpap {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
-}
-
-.dialog__content {
-  display: flex;
-  justify-content: flex-start;
   align-items: center;
   gap: 20px;
   max-width: 293px;
@@ -279,14 +283,6 @@
   flex-shrink: 0;
   inline-size: 39px;
   block-size: 39px;
-}
-.dialog__text {
-  color: var(--main-text-color);
-  font-family: var(--accent-text-font, "PressStart 2P", monospace);
-  font-weight: var(--font-weight-normal);
-  font-size: clamp(0.875rem, 0.875rem + 0vw, 0.875rem);
-  line-height: 150%;
-  text-transform: uppercase;
 }
 
 .dialog__button {
@@ -368,7 +364,7 @@
   }
 
   .dialog[open] {
-    padding: 30px 42px;
+    padding: 30px 38px;
     max-inline-size: 341px;
   }
 
