@@ -1,17 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца  
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку    
-✦ card__icon-button — для кнопки, оборачивающей иконку (надо ли этот class добавлять в footer)
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки 
-
-*/
-
-/* Общие стили для страницы */
-
 .page {
   margin: 0 auto;
   color: var(--main-text-color);
@@ -27,8 +13,6 @@
   min-inline-size: 320px;
   min-block-size: 100dvb;
 }
-
-/* Стили для заголовка */
 
 .header {
   width: 100%;
@@ -66,7 +50,6 @@
   text-transform: uppercase;
 }
 
-/* Стили для секций */
 .section {
   width: clamp(375px, calc(100% - 740px), 100%);
   margin: 0 auto;
@@ -141,8 +124,6 @@
   font-size: var(--main-font-size);
   line-height: 21px;
 }
-
-/* Стили для кнопок */
 
 .card__buttons {
   display: flex;
@@ -256,9 +237,9 @@
 }
 
 .dialog {
-  padding: 28px;
+  padding: 30px;
   outline: 2px solid rgba(0, 0, 0, 1);
-  max-inline-size: 357px;
+  max-inline-size: 353px;
 }
 
 .dialog::backdrop {
@@ -296,8 +277,6 @@
 .dialog__button .button__text {
   text-transform: uppercase;
 }
-
-/* Стили для эффектов */
 
 .black-and-white {
   filter: grayscale(80%);

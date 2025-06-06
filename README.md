@@ -18,5 +18,4 @@
 ## Как использовать
 
 1. **Клонирование репозитория**:
-   ```bash
    git clone https://github.com/NikolayKorobeinikov/zakrivayuschiy-teg-f.git
